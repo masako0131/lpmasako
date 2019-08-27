@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b9bf2de-4d00-4205-99a7-fe0583d7fef4/deploy-status)](https://app.netlify.com/sites/vigilant-darwin-b3b732/deploys)
+
 # lpmasako-prismic
 
 > My prime Nuxt.js project
