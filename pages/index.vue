@@ -118,7 +118,19 @@ export default {
   },
   head() {
     return {
-      title: this.$prismic.asText(this.document.data.title)
+      title: this.$prismic.asText(this.document.data.title),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$prismic.asText(this.document.data.summary)
+        },
+        {
+          vmid: "og:image",
+          property: "og:image",
+          content: this.document.data.og_image.url
+        }
+      ]
     };
   },
   components: {},

@@ -118,7 +118,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.$prismic.asText(this.document.data.description)
+          content: this.$prismic.asText(this.document.data.summary)
         },
         {
           vmid: "og:image",

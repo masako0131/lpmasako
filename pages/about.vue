@@ -92,11 +92,11 @@ export default {
     return {
       title: this.$prismic.asText(this.document.data.title),
       meta: [
-        // {
-        //   hid: "description",
-        //   name: "description",
-        //   content: this.$prismic.asText(this.document.data.description)
-        // },
+        {
+          hid: "description",
+          name: "description",
+          content: this.$prismic.asText(this.document.data.summary)
+        },
         {
           vmid: "og:image",
           property: "og:image",
