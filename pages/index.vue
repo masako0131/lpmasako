@@ -13,8 +13,8 @@
         >
           <div class="project-text-holder">
             <div class="project-text-inner">
-              <h3>{{$prismic.asText(item.image_captions)}}</h3>
-              <p>{{ $t('homepage.more') }}</p>
+              <h3 style="color:#4f4f4f;">{{$prismic.asText(item.image_captions)}}</h3>
+              <p style="color:#91533C;">{{ $t('homepage.more') }}</p>
             </div>
           </div>
         </nuxt-link>
@@ -115,6 +115,11 @@ export default {
     } else {
       error({ statusCode: 404, message: "Page not found" });
     }
+  },
+  head() {
+    return {
+      title: this.$prismic.asText(this.document.data.title)
+    };
   },
   components: {},
   async mounted() {

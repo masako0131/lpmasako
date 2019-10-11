@@ -15,14 +15,14 @@
         <div class="navbar-collapse" :class="{open:sidebar}" id="navbar-collapse">
           <div class="site-header hidden-xs">
             <nuxt-link class="site-brand" :to="localePath('index', $i18n.locale)">
-              <img class="img-responsive site-logo" alt src="/assets/logo-w-150.svg" />
-              La Pâtisserie Masako
+              <img class="img-responsive site-logo" alt src="/assets/logo-new.jpg" />
+              {{ $t('title') }}
             </nuxt-link>
             <!-- <a class="site-brand" href="/index.html" title>
               <img class="img-responsive site-logo" alt src="/assets/logo-w-150.svg" />
               La Pâtisserie Masako
             </a>-->
-            <p>{{ $t('slogan') }}</p>
+            <p style="color:#4f4f4f;">{{ $t('slogan') }}</p>
           </div>
           <ul class="nav">
             <li>
@@ -43,12 +43,12 @@
           </ul>
 
           <nav class="nav-footer">
-            <p>
+            <p style="color:#4f4f4f;">
               <nuxt-link v-if="$i18n.locale === 'zh'" :to="switchLocalePath('ja')">日本語</nuxt-link>
               <nuxt-link v-if="$i18n.locale === 'ja'" :to="switchLocalePath('zh')">繁體中文</nuxt-link>
             </p>
 
-            <p class="nav-footer-social-buttons">
+            <p class="nav-footer-social-buttons" style="color:#4f4f4f;">
               <a class="fa-icon" href="https://www.instagram.com/patissiermasako" title>
                 <i class="fa fa-instagram"></i>
               </a>
@@ -60,7 +60,7 @@
               </a>
             </p>
 
-            <p>
+            <p style="color:#4f4f4f;">
               © Masako H. | Website created with
               <a
                 href="http://www.mashup-template.com/"
@@ -80,7 +80,13 @@
 <script>
 export default {
   head() {
+    const i18nSeo = this.$nuxtI18nSeo();
     return {
+      titleTemplate: "%s - La Pâtisserie Masako",
+      htmlAttrs: {
+        ...i18nSeo.htmlAttrs
+      },
+      meta: [...i18nSeo.meta],
       script: [
         {
           src: "/main.85741bff.js"
@@ -90,7 +96,8 @@ export default {
         {
           rel: "stylesheet",
           href: "/main.82cfd66e.css"
-        }
+        },
+        ...i18nSeo.link
       ]
     };
   },
@@ -129,5 +136,17 @@ export default {
   .col-sm-6 {
     margin-top: 20px;
   }
+}
+.nav > li > a:hover {
+  color: #91533c;
+}
+.nav > li > a {
+  color: #4f4f4f;
+}
+.site-brand {
+  color: #4f4f4f !important;
+}
+.site-brand:hover {
+  color: #91533c !important;
 }
 </style>

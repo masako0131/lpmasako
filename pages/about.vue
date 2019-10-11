@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12 col-lg-8">
       <div class="section-container-spacer">
-        <h1>{{$prismic.asText(document.data.title)}}</h1>
+        <h1 style="color:#4f4f4f;">{{$prismic.asText(document.data.title)}}</h1>
       </div>
 
       <div
@@ -87,6 +87,23 @@ export default {
   async created() {
     // const lang = this.$i18n.locale === "ja" ? "ja-jp" : "zh-tw";
     // this.document = await getPage(this.$prismic, lang);
+  },
+  head() {
+    return {
+      title: this.$prismic.asText(this.document.data.title),
+      meta: [
+        // {
+        //   hid: "description",
+        //   name: "description",
+        //   content: this.$prismic.asText(this.document.data.description)
+        // },
+        {
+          vmid: "og:image",
+          property: "og:image",
+          content: this.document.data.og_image.url
+        }
+      ]
+    };
   },
   async mounted() {
     masonryBuild();

@@ -1,8 +1,9 @@
 module.exports = {
-  slogan: '神戸·パリ·台北 - 3都市で物語る仏蘭西菓子',
-  home: 'ホーム',
-  about: 'について',
+  title: "La Pâtisserie Masako",
+  slogan: "神戸·パリ·台北 - 3都市で物語る仏蘭西菓子",
+  home: "ホーム",
+  about: "について",
   homepage: {
-    more: '情報'
+    more: "情報"
   }
-}
+};
