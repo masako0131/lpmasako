@@ -74,6 +74,13 @@
               :src="slice.primary.image_banner.url"
             />
           </div>
+          <div v-if="slice.primary.layout === 'image_only' " :class="[`col-sm-12`]">
+            <img
+              class="img-responsive"
+              :alt="slice.primary.image_banner.alt"
+              :src="slice.primary.image_banner.url"
+            />
+          </div>
         </div>
         <div class="col-xs-12" v-if="slice.slice_type === 'image_gallery'">
           <div class="grid">
