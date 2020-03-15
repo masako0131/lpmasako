@@ -28,13 +28,13 @@
           <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
             <li class="nav-item">
               <a class="nav-link link text-white display-4" href="https://mobirise.co">
-                <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
+                <!-- <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span> -->
                 Services
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link link text-white display-4" href="https://mobirise.co">
-                <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                <!-- <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span> -->
                 About Us
               </a>
             </li>
@@ -121,27 +121,23 @@ export default {
         {
           src: "/mobiris_assets/ytplayer/jquery.mb.ytplayer.min.js"
         },
-        {
-          src: "/mobiris_assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js", defer: true
-        },
-        {
-          src: "/mobiris_assets/theme/js/script.js", defer: true
-        },
-        {
-          src: "/mobiris_assets/gallery/player.min.js", defer: true
-        },
-        {
-          src: "/mobiris_assets/gallery/script.js", defer: true
-        },
-        {
-          src: "/mobiris_assets/slidervideo/script.js", defer: true
-        }
+        // {
+        //   src: "/mobiris_assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js", defer: true
+        // },
+        // {
+        //   src: "/mobiris_assets/theme/js/script.js", defer: true
+        // },
+        // {
+        //   src: "/mobiris_assets/gallery/player.min.js", defer: true
+        // },
+        // {
+        //   src: "/mobiris_assets/gallery/script.js", defer: true
+        // },
+        // {
+        //   src: "/mobiris_assets/slidervideo/script.js", defer: true
+        // }
       ],
       link: [
-        { 
-          rel: 'stylesheet', 
-          href: '//fonts.googleapis.com/css2?family=EB+Garamond&family=Parisienne&display=swap' 
-        },
         {
           rel: "stylesheet",
           href: "/mobiris_assets/web/assets/mobirise-icons/mobirise-icons.css"
@@ -199,7 +195,5 @@ export default {
 };
 </script>
 <style scoped>
-.navbar-caption {
-  font-family: 'EB Garamond', serif;
-}
+
 </style>

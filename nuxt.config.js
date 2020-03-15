@@ -100,7 +100,7 @@ export default {
     extend(config, ctx) {}
   },
   // Remove Nuxt scripts
-  render: {
-    injectScripts: false
-  }
+  // render: {
+  //   injectScripts: false
+  // }
 };
