@@ -6,10 +6,6 @@
         <div class="row justify-content-md-center">
           <div class="mbr-white col-md-10">
             <img src="/mobiris_assets/images/logo.png" alt="">
-              <!-- <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">h</h1> -->
-              
-              <!-- <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                  Masako手作日法甜點 - La Pâtisserie Masako<br>神戶·巴黎·台北 - 有溫度的甜點故事<br></p> -->
               
           </div>
         </div>
@@ -20,6 +16,7 @@
         </a>
       </div>
     </section>
+    
     <section class="mbr-section article content9 cid-rThoGB6r4t" id="content9-2">
       <div class="container">
         <div class="inner-container" style="width: 100%;">
@@ -36,7 +33,7 @@
     </section>
 
     <section class="mbr-section content5 cid-rTiHS5TSrc mbr-parallax-background" id="content5-o" :style="{ backgroundImage: `url('${document.data.home_parallax_1_image.url}')` }">
-      <div class="mbr-overlay" style="opacity: 0.6; background-color: #AD92B2;">
+      <div class="mbr-overlay" style="opacity: 0.6; background-color: #513B58;">
       </div>
       <div class="container">
         <div class="media-container-row">
@@ -60,7 +57,6 @@
               {{$prismic.asText(document.data.body[0].primary.name_of_the_gallery)}}
             </div>
           </div>
-          <!--Card-1-->
           <div v-for="(item, i) in document.data.body[0].items" :key="i" class="card col-12 pb-5">
             <nuxt-link
               :to="localePath({ name: 'products-uid', params: { uid: item.productid.uid } }, $i18n.locale)"
@@ -70,7 +66,6 @@
                 <div class="card-box">
                   <div class="row">
                     <div class="col-12 col-md-2">
-                      <!--Image-->
                       <div class="mbr-figure">
                         <img :src="item.gallery_image.url" :alt="item.gallery_image.alt">
                       </div>
@@ -128,16 +123,18 @@
         <div class="row justify-content-center content-row">
           <div class="media-container-column title col-12 col-lg-7 col-md-6">
             <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5">
-              <i class="fa fa-instagram"></i> {{$t('follow_ig')}}
+              {{$t('follow_ig')}}
             </h3>
             <iframe src="//lightwidget.com/widgets/e4da85cc06f05e42ae25985ddd925807.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
           </div>
           <div class="media-container-column col-12 col-lg-3 col-md-4">
+
             <div class="mbr-section-btn align-right py-4">
               <a class="btn btn-primary display-4" target="_blank" href="https://www.instagram.com/patissiermasako">
-                @patissiermasako
+                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span> Follow
               </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -190,7 +187,7 @@ export default {
     this.loadJs('/mobiris_assets/gallery/player.min.js')
     this.loadJs('/mobiris_assets/gallery/script.js')
     this.loadJs('/mobiris_assets/slidervideo/script.js')
-    this.loadJs('//cdn.lightwidget.com/widgets/lightwidget.js')
+    this.loadJs('//cdn.lightwidget.com/widgets/lightwidget.js')   
   },
 };
 </script>

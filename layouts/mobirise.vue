@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div id="fb-root"></div>
     <section class="menu cid-rTiAafnmIP" once="menu" id="menu1-c">
       <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +48,78 @@
       </nav>
     </section>
 
-  <nuxt />
+    <nuxt />
+
+
+  <section class="cid-rTiEqWMzJ1 mbr-reveal mbr-parallax-background" id="footer1-l" :style="{ backgroundImage: `url('')` }">
+    <div class="mbr-overlay" style="opacity: 1; background-color: #513B58;"></div>
+    <div class="container">
+        <!-- <div class="media-container-row content text-white">
+            <div class="col-12 col-md-3">
+                <div class="media-wrap">
+                    <nuxt-link :to="localePath('index', $i18n.locale)">
+                      <img src="/mobiris_assets/images/logo.png" alt="">
+                    </nuxt-link>
+                </div>
+            </div>
+           
+            <div class="col-12 col-md-4 mbr-fonts-style display-7">
+                <h5 class="pb-3 text-warning">
+                    Contacts
+                </h5>
+                <p class="mbr-text text-warning">
+                    Email: <a href="mailto:la.patissier.masako@gmail.com">la.patissier.masako@gmail.com</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-4 mbr-fonts-style display-7">
+                
+            </div>
+        </div> -->
+        <div class="footer-lower">
+            <!-- <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div> -->
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7 text-warning">
+                        © Copyright 2020 Hayashi Masako - All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                      <div class="soc-item">
+                            <a href="mailto:la.patissier.masako@gmail.com" target="_blank">
+                                <span class="socicon-mail socicon mbr-iconfont mbr-iconfont-social text-warning"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://m.me/la.patisserie.masako" target="_blank">
+                                <span class="socicon-messenger socicon mbr-iconfont mbr-iconfont-social text-warning"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.instagram.com/patissiermasako" target="_blank">
+                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social text-warning"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.instagram.com/patissiermasako" target="_blank">
+                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social text-warning"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/channel/UCwqsitXmX-76-rEL9dRExGA" target="_blank">
+                                <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social text-warning"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
   <!-- <script src="/mobiris_assets/web/assets/jquery/jquery.min.js"></script> -->
@@ -69,6 +141,8 @@
   <script src="/mobiris_assets/gallery/script.js"></script>
   <script src="/mobiris_assets/slidervideo/script.js"></script> -->
 
+<input name="animation" type="hidden">
+   <!-- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div> -->
   </div>
   
 </template>
@@ -80,7 +154,7 @@ export default {
   head() {
     const i18nSeo = this.$nuxtI18nSeo();
     return {
-      titleTemplate: "%s - La Pâtisserie Masako",
+      titleTemplate: `%s - La Pâtisserie Masako`,
       htmlAttrs: {
         ...i18nSeo.htmlAttrs
       },
@@ -160,6 +234,10 @@ export default {
         },
         {
           rel: "stylesheet",
+          href: "/mobiris_assets/socicon/css/styles.css"
+        },
+        {
+          rel: "stylesheet",
           href: "/mobiris_assets/dropdown/css/style.css"
         },
         {
@@ -182,10 +260,6 @@ export default {
           rel: "stylesheet",
           href: "/mobiris_assets/mobirise/css/mbr-additional.css"
         },
-        {
-          rel: "stylesheet",
-          href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        },
         ...i18nSeo.link
       ]
     };
@@ -198,7 +272,7 @@ export default {
     
   },
   async mounted() {
-   
+
   }
 };
 </script>
