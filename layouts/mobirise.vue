@@ -12,36 +12,40 @@
         </button>
         <div class="menu-logo">
           <div class="navbar-brand">
-            <!-- <span class="navbar-logo">
-              <a href="/">
-                <img src="/mobiris_assets/images/logo_nav.png" alt="Mobirise" style="height: 2.8rem;">
-              </a>
-            </span> -->
-            <span class="navbar-caption-wrap">
+            <span class="navbar-logo">
+              <nuxt-link :to="localePath('index', $i18n.locale)">
+                <img src="/mobiris_assets/images/logo_nav.png"  style="height: 2.8rem;">
+              </nuxt-link>
+            </span>
+            <!-- <span class="navbar-caption-wrap">
               <nuxt-link class="navbar-caption text-warning display-4" :to="localePath('index', $i18n.locale)">
                 La Pâtisserie Masako
               </nuxt-link>
-            </span>
+            </span> -->
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
             <li class="nav-item">
-              <a class="nav-link link text-warning display-4" href="https://mobirise.co">
+              <a class="nav-link link text-warning display-4" href="#content5-o">
                 <!-- <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span> -->
-                Services
+                {{ $t('products') }}
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link text-warning display-4" href="https://mobirise.co">
-                <!-- <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span> -->
-                About Us
+              <a class="nav-link link text-warning display-4" href="#testimonials3-7">
+                <!-- <span class="mbri-info mbr-iconfont mbr-iconfont-btn"></span> -->
+                {{ $t('about') }}
               </a>
+            </li>
+            <li class="nav-item">
+              <nuxt-link v-if="$i18n.locale === 'zh'" class="nav-link link text-warning display-4" :to="switchLocalePath('ja')">日本語</nuxt-link>
+              <nuxt-link v-if="$i18n.locale === 'ja'" class="nav-link link text-warning display-4" :to="switchLocalePath('zh')">繁體中文</nuxt-link>
             </li>
           </ul>
         </div>
       </nav>
-  </section>
+    </section>
 
   <nuxt />
 
@@ -178,6 +182,10 @@ export default {
           rel: "stylesheet",
           href: "/mobiris_assets/mobirise/css/mbr-additional.css"
         },
+        {
+          rel: "stylesheet",
+          href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        },
         ...i18nSeo.link
       ]
     };
@@ -194,6 +202,13 @@ export default {
   }
 };
 </script>
-<style scoped>
-
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
 </style>
