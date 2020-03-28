@@ -182,11 +182,11 @@ export default {
     }
   },
   mounted() {
-    this.loadJs('/mobiris_assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js')
+    //this.loadJs('/mobiris_assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js')
     this.loadJs('/mobiris_assets/theme/js/script.js')
-    this.loadJs('/mobiris_assets/gallery/player.min.js')
-    this.loadJs('/mobiris_assets/gallery/script.js')
-    this.loadJs('/mobiris_assets/slidervideo/script.js')
+    //this.loadJs('/mobiris_assets/gallery/player.min.js')
+    //this.loadJs('/mobiris_assets/gallery/script.js')
+    //this.loadJs('/mobiris_assets/slidervideo/script.js')
     this.loadJs('//cdn.lightwidget.com/widgets/lightwidget.js')   
   },
 };

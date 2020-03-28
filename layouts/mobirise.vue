@@ -40,6 +40,16 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link link text-warning display-4" href="https://www.facebook.com/la.patisserie.masako/" target="_blank">
+                <span class="socicon-facebook socicon text-warning"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-warning display-4" href="https://www.instagram.com/patissiermasako" target="_blank">
+                <span class="socicon-instagram socicon text-warning"></span>
+              </a>
+            </li>
+            <li class="nav-item">
               <nuxt-link v-if="$i18n.locale === 'zh'" class="nav-link link text-warning display-4" :to="switchLocalePath('ja')">日本語</nuxt-link>
               <nuxt-link v-if="$i18n.locale === 'ja'" class="nav-link link text-warning display-4" :to="switchLocalePath('zh')">繁體中文</nuxt-link>
             </li>
@@ -105,7 +115,7 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.instagram.com/patissiermasako" target="_blank">
+                            <a href="https://www.facebook.com/la.patisserie.masako/" target="_blank">
                                 <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social text-warning"></span>
                             </a>
                         </div>
@@ -179,6 +189,9 @@ export default {
           src: "/mobiris_assets/dropdown/js/navbar-dropdown.js"
         },
         {
+          src: "/viewportchecker/jquery.viewportchecker.js"
+        },
+        {
           src: "/mobiris_assets/touchswipe/jquery.touch-swipe.min.js"
         },
         {
@@ -243,6 +256,10 @@ export default {
         {
           rel: "stylesheet",
           href: "/mobiris_assets/tether/tether.min.css"
+        },
+        {
+          rel: "stylesheet",
+          href: "/mobiris_assets/animatecss/animate.min.css"
         },
         {
           rel: "stylesheet",
