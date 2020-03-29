@@ -22,7 +22,7 @@
         <div class="inner-container" style="width: 100%;">
           <hr class="line" style="width: 25%;">
           <div class="row pt-4 justify-content-center">
-            <img src="/mobiris_assets/images/masako-logo.jpg" style="max-width:50%;">
+            <img src="/mobiris_assets/images/masako-logo.jpg" style="max-width:50%;height:auto;display:block;">
           </div>
           <div class="section-text align-center mbr-fonts-style display-5">
             {{$prismic.asText(document.data.home_slogan)}}
