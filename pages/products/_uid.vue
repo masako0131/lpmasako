@@ -7,31 +7,14 @@
         <div class="media-container-row">
           <div class="media-content align-right">
             <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
-              {{$prismic.asText(document.data.title)}}
+              {{$prismic.asText(document.data.display_title)}}
             </h1>
             <div class="mbr-section-text mbr-white pb-3">
               <p 
                 class="mbr-text mbr-fonts-style display-5"
-                v-html="$prismic.asHtml(document.data.summary)">
+                v-html="$prismic.asHtml(document.data.display_summary)">
               </p>
             </div>
-            <!-- <div class="mbr-section-btn">
-              <a
-                v-if="document.data.status === 'selling'"
-                :href="document.data.buylink.url"
-                class="btn btn-md btn-primary display-4"
-              >前往購買</a>
-              <a
-                v-else-if="document.data.status === 'out_of_stock'"
-                disabled
-                class="btn btn-md btn-primary display-4"
-              >缺貨中</a>
-              <a
-                v-else-if="document.data.status === 'not_season'"
-                disabled
-                class="btn btn-md btn-primary display-4"
-              >目前非產季</a>
-            </div> -->
           </div>
           <div v-if="$prismic.asText(document.data.youtube_video_id)" class="mbr-figure" style="width: 100%;">
             <iframe 
@@ -59,7 +42,7 @@
             </div>
             <div class=" align-left aside-content">
               <h2 class="mbr-title pt-2 mbr-fonts-style display-2">
-                {{$prismic.asText(document.data.title)}}
+                {{$prismic.asText(document.data.product_title)}}
               </h2>
               <div class="mbr-section-text">
                 <p class="mbr-text mb-5 pt-3 mbr-light mbr-fonts-style display-7" v-html="$prismic.asHtml(document.data.description)">
@@ -97,7 +80,81 @@
       </div>          
     </section>
 
+    <section class="mbr-section article content1 cid-rTiRdPkXDO" v-for="(slice, index) in document.data.body" :key="index" style="padding-bottom:0px;">
+      <div v-if="slice.slice_type === 'text'" class="container">
+        <div class="media-container-row">
+          <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8" v-html="$prismic.asHtml(slice.primary.text)">
+          </div>
+        </div>
+      </div>
+      <div v-else-if="slice.slice_type === 'banner_with_caption'" class="container">
+        
+        <div class="media-container-row">
+          <div class="col-12 col-md-8">
 
+            <div v-if="slice.primary.layout === 'image_left' " class="media-container-row">
+              <div class="mbr-figure" :style="{width:`${slice.primary.image_col_width}0%`}">
+                <img class="img-responsive" :src="slice.primary.image_banner.url" :alt="slice.primary.image_banner.alt">  
+              </div>
+              <div class="media-content">
+                <div class="mbr-section-text">
+                  <p 
+                    class="mbr-text mb-0 mbr-fonts-style display-7"
+                    v-html="$prismic.asHtml(slice.primary.description)"
+                    ></p>
+                </div>
+              </div>
+            </div>
+            <div v-else-if="slice.primary.layout === 'image_right' " class="media-container-row">
+              <div class="media-content">
+                <div class="mbr-section-text">
+                  <p 
+                    class="mbr-text mb-0 mbr-fonts-style display-7"
+                    v-html="$prismic.asHtml(slice.primary.description)"
+                    ></p>
+                </div>
+              </div>
+              <div class="mbr-figure" :style="{width:`${slice.primary.image_col_width}0%`}">
+                <img class="img-responsive" :src="slice.primary.image_banner.url" :alt="slice.primary.image_banner.alt">  
+              </div>
+            </div>
+            <figure v-else-if="slice.primary.layout === 'image_only' " class="mbr-figure">
+              <div class="image-block" style="width: 100%;">
+                <img :src="slice.primary.image_banner.url" :alt="slice.primary.image_banner.alt">
+              </div>
+            </figure>
+            
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="mbr-section article content1  cid-rTiRajl6hu">
+      <div class="container">
+        <div class="row pt-4 justify-content-center">
+          <div class="mbr-section-btn">
+            <a
+              v-if="document.data.status === 'selling'"
+              :href="document.data.buylink.url"
+              class="btn btn-md btn-primary display-4"
+            >前往購買</a>
+            <a
+              v-else-if="document.data.status === 'out_of_stock'"
+              disabled
+              class="btn btn-md btn-primary display-4"
+            >缺貨中</a>
+            <a
+              v-else-if="document.data.status === 'not_season'"
+              disabled
+              class="btn btn-md btn-primary display-4"
+            >目前非產季</a>
+          </div>
+        </div>
+      </div>
+    </section>
     
   </div>
 </template>
