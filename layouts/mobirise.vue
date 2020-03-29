@@ -28,15 +28,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
             <li class="nav-item">
-              <a v-if="$nuxt.$route.name.includes('index')" class="nav-link link text-warning display-4" href="#content5-o">
+              <a class="nav-link link text-warning display-4" href="#content5-o">
                 <!-- <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span> -->
                 {{ $t('products') }}
               </a>
-              <nuxt-link v-else class="nav-link link text-warning display-4" :to="localePath('index', $i18n.locale)">
-                {{ $t('home') }}
-              </nuxt-link>
             </li>
-            <li v-if="$nuxt.$route.name.includes('index')" class="nav-item">
+            <li class="nav-item">
               <a class="nav-link link text-warning display-4" href="#testimonials3-7">
                 <!-- <span class="mbri-info mbr-iconfont mbr-iconfont-btn"></span> -->
                 {{ $t('about') }}
