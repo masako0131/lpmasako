@@ -14,7 +14,7 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: pkg.description }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/fav.png" }]
   },
 
   /*
@@ -98,5 +98,9 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  }
+  },
+  // Remove Nuxt scripts
+  // render: {
+  //   injectScripts: false
+  // }
 };
