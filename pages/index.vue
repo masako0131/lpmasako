@@ -21,9 +21,9 @@
       <div class="container">
         <div class="inner-container" style="width: 100%;">
           <hr class="line" style="width: 25%;">
-          <div class="row pt-4 justify-content-center">
+          <!-- <div class="row pt-4 justify-content-center">
             <img class="img-fluid" src="/mobiris_assets/images/masako-logo.jpg">
-          </div>
+          </div> -->
           <div class="section-text align-center mbr-fonts-style display-5">
             {{$prismic.asText(document.data.home_slogan)}}
           </div>
