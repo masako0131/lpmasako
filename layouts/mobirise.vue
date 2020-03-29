@@ -192,7 +192,7 @@ export default {
           src: "/mobiris_assets/dropdown/js/navbar-dropdown.js"
         },
         {
-          src: "/viewportchecker/jquery.viewportchecker.js"
+          src: "/mobiris_assets/viewportchecker/jquery.viewportchecker.js"
         },
         {
           src: "/mobiris_assets/touchswipe/jquery.touch-swipe.min.js"
