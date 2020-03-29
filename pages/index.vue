@@ -118,7 +118,7 @@
       </div>
     </section>
 
-    <section class="mbr-section info1 cid-rTiKjFvQ0B" id="info1-r">
+    <!-- <section class="mbr-section info1 cid-rTiKjFvQ0B" id="info1-r">
       <div class="container">
         <div class="row justify-content-center content-row">
           <div class="media-container-column title col-12 col-lg-7 col-md-6">
@@ -138,7 +138,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     
 
@@ -187,7 +187,7 @@ export default {
     //this.loadJs('/mobiris_assets/gallery/player.min.js')
     //this.loadJs('/mobiris_assets/gallery/script.js')
     //this.loadJs('/mobiris_assets/slidervideo/script.js')
-    this.loadJs('//cdn.lightwidget.com/widgets/lightwidget.js')   
+    //this.loadJs('//cdn.lightwidget.com/widgets/lightwidget.js')   
   },
 };
 </script>
